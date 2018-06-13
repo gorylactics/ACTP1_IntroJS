@@ -62,5 +62,45 @@
 
       </fieldset>
     </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+    <script>
+      $('h1').css('color', 'red');
+      $('.section-1').css ('background-color', 'yellow');
+      
+      // forma de crear una variable para poder hacer operatoria y modificacion de straing a number , en vez de parseInt podria haber sido Number pero por un asunto de escritura es mas sencillo hacerlo asi
+      var numero = parseInt($('.counter').html())+10;
+      $('.counter').html(numero);
+      // fin del comunicado
+
+
+      // accion de click
+      $('#row-3').click(function(){
+        alert('ejaleeeeee');      
+     
+    //   $('#row-3').animate({
+    //     backgroundColor: 'gray'
+    //   },1000);
+    // }); con libreria jquery
+
+
+
+      $('#row-3').css({
+        backgroundColor: 'gray',
+        transition: 'all 1s'
+      });
+    });         //para ejecutar con css , funciona solo hasta explorer 6
+      //cambiar el tamañno de la fuente 
+      var size = $('.section-1 h1').css ('font-size');
+      $('.section-1 h1').css ('font-size', parseInt(size) * 2);
+
+      // CAMBIAR ULTIMO ROW
+      // $('.row').last().css('background-color', 'red').css;
+      // ò
+      $('.row:last-child').last().css('background-color', 'red').css;
+
+
+
+    </script>
   </body>
 </html>
